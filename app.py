@@ -175,6 +175,7 @@ def satin_al():
 
 @app.route("/cikis")
 def cikis():
+    session.clear()  
     flash("Başarıyla çıkış yaptınız.")
     return redirect(url_for("ana_sayfa"))
 
