@@ -44,7 +44,7 @@ def kayit():
             hatalar.append("Geçerli bir e-posta adresi giriniz.")
         else:
             for k in kullanicilar.values():
-                if k["email"] == email:
+                if k["email"].lower() == email.lower():    
                     hatalar.append("Bu e-posta zaten kayıtlı.")
 
         if len(sifre) < 8 or len(sifre) > 20:  
