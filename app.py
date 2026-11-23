@@ -127,7 +127,7 @@ def sepete_ekle():
     if not adet:
         flash("Adet boş bırakılamaz.")
         return render_template("oyunlar.html", oyunlar=OYUNLAR, kullanici=session["kullanici"]), 400
-    if not adet.isdigit():
+    if not adet.lstrip("-").isdigit(): 
         flash("Adet bir sayı olmalıdır.")
         return render_template("oyunlar.html", oyunlar=OYUNLAR, kullanici=session["kullanici"]), 400
     if int(adet) < 1 or int(adet) > 5:

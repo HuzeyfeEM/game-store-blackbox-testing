@@ -221,3 +221,16 @@ Diyagram dosyası: `diyagramlar/durum-gecis-diyagrami.png`
 | Sınır Değer Analizi  | 26          | 24       | 2         | H-01, H-04      |
 | Durum Geçiş Testi    | 12          | 9        | 3         | H-03            |
 | **Toplam**           | **62**      | **55**   | **7**     | **5 hata**      |
+
+## 6. Düzeltme Sonrası Test Sonuçları
+
+5 hata düzeltildikten sonra **aynı 62 test tekrar çalıştırıldı** (24.11.2026, `duzeltilmis-surum`).
+
+| Teknik               | Test sayısı | Başarılı | Başarısız |
+|----------------------|-------------|----------|-----------|
+| Eşdeğerlik Bölümleme | 24          | 24       | 0         |
+| Sınır Değer Analizi  | 26          | 26       | 0         |
+| Durum Geçiş Testi    | 12          | 12       | 0         |
+| **Toplam**           | **62**      | **62**   | **0**     |
+
+Ekran görüntüleri: `test-ciktilari/TUM-TESTLER-duzeltme-sonrasi-1.png`, `test-ciktilari/TUM-TESTLER-duzeltme-sonrasi-2.png`
