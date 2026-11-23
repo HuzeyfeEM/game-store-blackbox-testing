@@ -45,7 +45,7 @@ Ekran görüntüleri `hata-fotograflari/` klasöründe saklanır. Her hata için
 - **Beklenen:** "Bu e-posta zaten kayıtlı." hatası çıkmalı.
 - **Gerçekleşen:** İkinci kayıt başarılı oluyor.
 - **Yakalayan test(ler):** EP-09
-- **Ekran görüntüleri:** `H-02-1-hata.png`, `H-02-2-test-basarisiz.png`, `H-02-3-test-basarili.png`
+- **Ekran görüntüleri:** `H-02-1a-hata-form.png`, `H-02-1b-hata-sonuc.png`, `H-02-2-test-basarisiz.png`, `H-02-3-test-basarili.png`
 
 ## H-03: Çıkış yapınca oturum kapanmıyor
 
@@ -60,7 +60,7 @@ Ekran görüntüleri `hata-fotograflari/` klasöründe saklanır. Her hata için
 - **Beklenen:** Giriş sayfasına yönlendirilmeli.
 - **Gerçekleşen:** Oyunlar sayfası açılıyor, menüde hâlâ kullanıcı adı görünüyor. Giriş sayfasına basınca eski hesaba otomatik giriş yapılıyor.
 - **Yakalayan test(ler):** ST-10, ST-11, ST-12
-- **Ekran görüntüleri:** `H-03-1-hata.png`, `H-03-2-test-basarisiz.png`, `H-03-3-test-basarili.png`
+- **Ekran görüntüleri:** `H-03-1a-giris-yapildi.png`, `H-03-1b-hata-cikis-sonrasi.png`, `H-03-2a-test-basarisiz-ST10.png`, `H-03-2b-test-basarisiz-ST11.png`, `H-03-2c-test-basarisiz-ST12.png`, `H-03-3-test-basarili.png`
 
 ## H-04: Sepete tek tek eklenince bir oyundan 5'ten fazla alınabiliyor
 
@@ -75,7 +75,7 @@ Ekran görüntüleri `hata-fotograflari/` klasöründe saklanır. Her hata için
 - **Beklenen:** "Bir oyundan en fazla 5 adet alınabilir." gibi bir hata çıkmalı.
 - **Gerçekleşen:** Sepette 6 adet görünüyor.
 - **Yakalayan test(ler):** BVA-26
-- **Ekran görüntüleri:** `H-04-1-hata.png`, `H-04-2-test-basarisiz.png`, `H-04-3-test-basarili.png`
+- **Ekran görüntüleri:** `H-04-1a-sepette-5-adet.png`, `H-04-1b-hata-sepette-6-adet.png`, `H-04-2-test-basarisiz.png`, `H-04-3-test-basarili.png`
 
 ## H-05: Negatif adet girilince yanlış hata mesajı çıkıyor
 

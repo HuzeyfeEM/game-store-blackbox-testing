@@ -47,7 +47,7 @@ def kayit():
                 if k["email"] == email:
                     hatalar.append("Bu e-posta zaten kayıtlı.")
 
-        if len(sifre) <= 8 or len(sifre) > 20:
+        if len(sifre) < 8 or len(sifre) > 20:  
             hatalar.append("Şifre 8-20 karakter olmalıdır.")
         if sifre != sifre_tekrar:
             hatalar.append("Şifreler eşleşmiyor.")
