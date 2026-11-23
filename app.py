@@ -134,7 +134,10 @@ def sepete_ekle():
         flash("Adet 1 ile 5 arasında olmalıdır.")
         return render_template("oyunlar.html", oyunlar=OYUNLAR, kullanici=session["kullanici"]), 400
 
-    sepet = session.get("sepet", {})
+    sepet = session.get("sepet", {})  
+    if sepet.get(oyun_id, 0) + int(adet) > 5:
+        flash("Bir oyundan en fazla 5 adet alınabilir.")
+        return render_template("oyunlar.html", oyunlar=OYUNLAR, kullanici=session["kullanici"]), 400
     sepet[oyun_id] = sepet.get(oyun_id, 0) + int(adet)
     session["sepet"] = sepet
     flash(f"{oyun['ad']} sepete eklendi ({adet} adet).")
