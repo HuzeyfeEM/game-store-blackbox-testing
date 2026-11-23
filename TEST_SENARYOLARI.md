@@ -51,45 +51,45 @@
 
 **Kayıt testleri için adımlar:** 1) `/kayit` sayfasını aç → 2) Alanları doldur → 3) "Kayıt Ol" butonuna bas.
 
-| Test ID | Test edilen özellik              | Sınıf   | Ön koşul | Test girdisi                                         | Beklenen sonuç                                         | Gerçekleşen sonuç | Durum |
-|---------|----------------------------------|---------|----------|------------------------------------------------------|--------------------------------------------------------|-------------------|-------|
-| EP-01   | Geçerli kayıt                    | GS1–GS5 | ÖK-1     | Varsayılan geçerli veri                              | Giriş sayfasına yönlendirilir (302), "Kayıt başarılı!" |                   |       |
-| EP-02   | Kullanıcı adı çok kısa           | GZ1     | ÖK-1     | kullanıcı adı = `ab`                                 | 400, "Kullanıcı adı 3-15 karakter olmalıdır."          |                   |       |
-| EP-03   | Kullanıcı adı çok uzun           | GZ2     | ÖK-1     | kullanıcı adı = 20 karakter (`aaaaaaaaaaaaaaaaaaaa`) | 400, "Kullanıcı adı 3-15 karakter olmalıdır."          |                   |       |
-| EP-04   | Kullanıcı adı alınmış            | GZ3     | ÖK-1     | kullanıcı adı = `ali`                                | 400, "Bu kullanıcı adı zaten alınmış."                 |                   |       |
-| EP-05   | Kullanıcı adı boş                | GZ4     | ÖK-1     | kullanıcı adı = (boş)                                | 400, "Tüm alanlar doldurulmalıdır."                    |                   |       |
-| EP-06   | E-postada `@` yok                | GZ5     | ÖK-1     | e-posta = `mehmettest.com`                           | 400, "Geçerli bir e-posta adresi giriniz."             |                   |       |
-| EP-07   | E-postada alan adı yok           | GZ6     | ÖK-1     | e-posta = `mehmet@`                                  | 400, "Geçerli bir e-posta adresi giriniz."             |                   |       |
-| EP-08   | E-posta zaten kayıtlı            | GZ7     | ÖK-1     | e-posta = `ali@test.com`                             | 400, "Bu e-posta zaten kayıtlı."                       |                   |       |
-| EP-09   | E-posta farklı harflerle kayıtlı | GZ8     | ÖK-1     | e-posta = `ALI@test.com`                             | 400, "Bu e-posta zaten kayıtlı."                       |                   |       |
-| EP-10   | Şifre çok kısa                   | GZ9     | ÖK-1     | şifre ve tekrar = `oyun1`                            | 400, "Şifre 8-20 karakter olmalıdır."                  |                   |       |
-| EP-11   | Şifre çok uzun                   | GZ10    | ÖK-1     | şifre ve tekrar = 25 karakter                        | 400, "Şifre 8-20 karakter olmalıdır."                  |                   |       |
-| EP-12   | Şifreler eşleşmiyor              | GZ11    | ÖK-1     | şifre tekrar = `baska12345`                          | 400, "Şifreler eşleşmiyor."                            |                   |       |
-| EP-13   | Yaş çok küçük                    | GZ12    | ÖK-1     | yaş = `10`                                           | 400, "Yaş 13 ile 99 arasında olmalıdır."               |                   |       |
-| EP-14   | Yaş çok büyük                    | GZ13    | ÖK-1     | yaş = `120`                                          | 400, "Yaş 13 ile 99 arasında olmalıdır."               |                   |       |
-| EP-15   | Yaş sayı değil                   | GZ14    | ÖK-1     | yaş = `yirmi`                                        | 400, "Yaş bir sayı olmalıdır."                         |                   |       |
+| Test ID | Test edilen özellik              | Sınıf   | Ön koşul | Test girdisi                                         | Beklenen sonuç                                         | Gerçekleşen sonuç                                               | Durum               |
+|---------|----------------------------------|---------|----------|------------------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------|---------------------|
+| EP-01   | Geçerli kayıt                    | GS1–GS5 | ÖK-1     | Varsayılan geçerli veri                              | Giriş sayfasına yönlendirilir (302), "Kayıt başarılı!" | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-02   | Kullanıcı adı çok kısa           | GZ1     | ÖK-1     | kullanıcı adı = `ab`                                 | 400, "Kullanıcı adı 3-15 karakter olmalıdır."          | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-03   | Kullanıcı adı çok uzun           | GZ2     | ÖK-1     | kullanıcı adı = 20 karakter (`aaaaaaaaaaaaaaaaaaaa`) | 400, "Kullanıcı adı 3-15 karakter olmalıdır."          | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-04   | Kullanıcı adı alınmış            | GZ3     | ÖK-1     | kullanıcı adı = `ali`                                | 400, "Bu kullanıcı adı zaten alınmış."                 | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-05   | Kullanıcı adı boş                | GZ4     | ÖK-1     | kullanıcı adı = (boş)                                | 400, "Tüm alanlar doldurulmalıdır."                    | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-06   | E-postada `@` yok                | GZ5     | ÖK-1     | e-posta = `mehmettest.com`                           | 400, "Geçerli bir e-posta adresi giriniz."             | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-07   | E-postada alan adı yok           | GZ6     | ÖK-1     | e-posta = `mehmet@`                                  | 400, "Geçerli bir e-posta adresi giriniz."             | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-08   | E-posta zaten kayıtlı            | GZ7     | ÖK-1     | e-posta = `ali@test.com`                             | 400, "Bu e-posta zaten kayıtlı."                       | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-09   | E-posta farklı harflerle kayıtlı | GZ8     | ÖK-1     | e-posta = `ALI@test.com`                             | 400, "Bu e-posta zaten kayıtlı."                       | 302, kayıt başarılı oldu (aynı e-posta ile ikinci hesap açıldı) | ❌ Başarısız (H-02) |
+| EP-10   | Şifre çok kısa                   | GZ9     | ÖK-1     | şifre ve tekrar = `oyun1`                            | 400, "Şifre 8-20 karakter olmalıdır."                  | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-11   | Şifre çok uzun                   | GZ10    | ÖK-1     | şifre ve tekrar = 25 karakter                        | 400, "Şifre 8-20 karakter olmalıdır."                  | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-12   | Şifreler eşleşmiyor              | GZ11    | ÖK-1     | şifre tekrar = `baska12345`                          | 400, "Şifreler eşleşmiyor."                            | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-13   | Yaş çok küçük                    | GZ12    | ÖK-1     | yaş = `10`                                           | 400, "Yaş 13 ile 99 arasında olmalıdır."               | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-14   | Yaş çok büyük                    | GZ13    | ÖK-1     | yaş = `120`                                          | 400, "Yaş 13 ile 99 arasında olmalıdır."               | Beklenen ile aynı                                               | ✅ Başarılı         |
+| EP-15   | Yaş sayı değil                   | GZ14    | ÖK-1     | yaş = `yirmi`                                        | 400, "Yaş bir sayı olmalıdır."                         | Beklenen ile aynı                                               | ✅ Başarılı         |
 
 **Giriş testleri için adımlar:** 1) `/giris` sayfasını aç → 2) Kullanıcı adı ve şifreyi yaz → 3) "Giriş Yap" butonuna bas.
 
-| Test ID | Test edilen özellik       | Sınıf | Ön koşul | Test girdisi            | Beklenen sonuç                                           | Gerçekleşen sonuç | Durum |
-|---------|---------------------------|-------|----------|-------------------------|----------------------------------------------------------|-------------------|-------|
-| EP-16   | Geçerli giriş             | GS6   | ÖK-1     | `ali` / `oyun12345`     | Oyunlar sayfasına yönlendirilir (302), "Giriş başarılı." |                   |       |
-| EP-17   | Yanlış şifre              | GZ15  | ÖK-1     | `ali` / `yanlis123`     | 401, "Kullanıcı adı veya şifre hatalı."                  |                   |       |
-| EP-18   | Kayıtlı olmayan kullanıcı | GZ16  | ÖK-1     | `yokkisi` / `oyun12345` | 401, "Kullanıcı adı veya şifre hatalı."                  |                   |       |
-| EP-19   | Boş alan                  | GZ17  | ÖK-1     | `ali` / (boş)           | 400, "Kullanıcı adı ve şifre boş bırakılamaz."           |                   |       |
+| Test ID | Test edilen özellik       | Sınıf | Ön koşul | Test girdisi            | Beklenen sonuç                                           | Gerçekleşen sonuç | Durum       |
+|---------|---------------------------|-------|----------|-------------------------|----------------------------------------------------------|-------------------|-------------|
+| EP-16   | Geçerli giriş             | GS6   | ÖK-1     | `ali` / `oyun12345`     | Oyunlar sayfasına yönlendirilir (302), "Giriş başarılı." | Beklenen ile aynı | ✅ Başarılı |
+| EP-17   | Yanlış şifre              | GZ15  | ÖK-1     | `ali` / `yanlis123`     | 401, "Kullanıcı adı veya şifre hatalı."                  | Beklenen ile aynı | ✅ Başarılı |
+| EP-18   | Kayıtlı olmayan kullanıcı | GZ16  | ÖK-1     | `yokkisi` / `oyun12345` | 401, "Kullanıcı adı veya şifre hatalı."                  | Beklenen ile aynı | ✅ Başarılı |
+| EP-19   | Boş alan                  | GZ17  | ÖK-1     | `ali` / (boş)           | 400, "Kullanıcı adı ve şifre boş bırakılamaz."           | Beklenen ile aynı | ✅ Başarılı |
 
 **Sepet testleri için ön koşul (ÖK-2):** ÖK-1 + `ali` ile giriş yapılmış, sepet boş.
 **Adımlar:** 1) `/oyunlar` sayfasını aç → 2) Minecraft kartındaki adet alanına değeri yaz → 3) "Sepete Ekle" butonuna bas.
 
-| Test ID | Test edilen özellik | Sınıf | Ön koşul | Test girdisi | Beklenen sonuç                                                | Gerçekleşen sonuç | Durum |
-|---------|---------------------|-------|----------|--------------|---------------------------------------------------------------|-------------------|-------|
-| EP-20   | Geçerli adet        | GS7   | ÖK-2     | adet = `3`   | Sepet sayfasına yönlendirilir (302), sepette 3 adet Minecraft |                   |       |
-| EP-21   | Adet çok küçük      | GZ18  | ÖK-2     | adet = `-2`  | 400, "Adet bir sayı olmalıdır."                               |                   |       |
-| EP-22   | Adet çok büyük      | GZ19  | ÖK-2     | adet = `10`  | 400, "Adet 1 ile 5 arasında olmalıdır."                       |                   |       |
-| EP-23   | Adet sayı değil     | GZ20  | ÖK-2     | adet = `iki` | 400, "Adet bir sayı olmalıdır."                               |                   |       |
-| EP-24   | Adet boş            | GZ21  | ÖK-2     | adet = (boş) | 400, "Adet boş bırakılamaz."                                  |                   |       |
+| Test ID | Test edilen özellik | Sınıf | Ön koşul | Test girdisi | Beklenen sonuç                                                | Gerçekleşen sonuç                              | Durum               |
+|---------|---------------------|-------|----------|--------------|---------------------------------------------------------------|------------------------------------------------|---------------------|
+| EP-20   | Geçerli adet        | GS7   | ÖK-2     | adet = `3`   | Sepet sayfasına yönlendirilir (302), sepette 3 adet Minecraft | Beklenen ile aynı                              | ✅ Başarılı         |
+| EP-21   | Adet çok küçük      | GZ18  | ÖK-2     | adet = `-2`  | 400, "Adet bir sayı olmalıdır."                               | 400, "Adet bir sayı olmalıdır." (yanlış mesaj) | ❌ Başarısız (H-05) |
+| EP-22   | Adet çok büyük      | GZ19  | ÖK-2     | adet = `10`  | 400, "Adet 1 ile 5 arasında olmalıdır."                       | Beklenen ile aynı                              | ✅ Başarılı         |
+| EP-23   | Adet sayı değil     | GZ20  | ÖK-2     | adet = `iki` | 400, "Adet bir sayı olmalıdır."                               | Beklenen ile aynı                              | ✅ Başarılı         |
+| EP-24   | Adet boş            | GZ21  | ÖK-2     | adet = (boş) | 400, "Adet boş bırakılamaz."                                  | Beklenen ile aynı                              | ✅ Başarılı         |
 
-> "Gerçekleşen sonuç" ve "Durum" sütunları testler çalıştırıldıktan sonra doldurulacak.
+> Testler 23.11.2026 tarihinde pytest ile çalıştırıldı (`hatali-surum`).
 
 ---
 
@@ -112,42 +112,42 @@
 **Kayıt testleri:** Ön koşul ÖK-1. Varsayılan geçerli kayıt verisi kullanılır, sadece test edilen alan değiştirilir (şifre testlerinde şifre tekrar alanına da aynı değer yazılır).
 **Adımlar:** 1) `/kayit` sayfasını aç → 2) Alanları doldur → 3) "Kayıt Ol" butonuna bas.
 
-| Test ID | Test edilen özellik | Sınır noktası    | Ön koşul | Test girdisi                         | Beklenen sonuç                                | Gerçekleşen sonuç | Durum |
-|---------|---------------------|------------------|----------|--------------------------------------|-----------------------------------------------|-------------------|-------|
-| BVA-01  | Kullanıcı adı       | Alt sınırın altı | ÖK-1     | 2 karakter: `ab`                     | 400, "Kullanıcı adı 3-15 karakter olmalıdır." |                   |       |
-| BVA-02  | Kullanıcı adı       | Alt sınır        | ÖK-1     | 3 karakter: `abc`                    | Kayıt başarılı (302)                          |                   |       |
-| BVA-03  | Kullanıcı adı       | Alt sınırın üstü | ÖK-1     | 4 karakter: `abcd`                   | Kayıt başarılı (302)                          |                   |       |
-| BVA-04  | Kullanıcı adı       | Üst sınırın altı | ÖK-1     | 14 karakter: `abcdefghijklmn`        | Kayıt başarılı (302)                          |                   |       |
-| BVA-05  | Kullanıcı adı       | Üst sınır        | ÖK-1     | 15 karakter: `abcdefghijklmno`       | Kayıt başarılı (302)                          |                   |       |
-| BVA-06  | Kullanıcı adı       | Üst sınırın üstü | ÖK-1     | 16 karakter: `abcdefghijklmnop`      | 400, "Kullanıcı adı 3-15 karakter olmalıdır." |                   |       |
-| BVA-07  | Şifre               | Alt sınırın altı | ÖK-1     | 7 karakter: `oyun123`                | 400, "Şifre 8-20 karakter olmalıdır."         |                   |       |
-| BVA-08  | Şifre               | Alt sınır        | ÖK-1     | 8 karakter: `oyun1234`               | Kayıt başarılı (302)                          |                   |       |
-| BVA-09  | Şifre               | Alt sınırın üstü | ÖK-1     | 9 karakter: `oyun12345`              | Kayıt başarılı (302)                          |                   |       |
-| BVA-10  | Şifre               | Üst sınırın altı | ÖK-1     | 19 karakter: `oyun123456789012345`   | Kayıt başarılı (302)                          |                   |       |
-| BVA-11  | Şifre               | Üst sınır        | ÖK-1     | 20 karakter: `oyun1234567890123456`  | Kayıt başarılı (302)                          |                   |       |
-| BVA-12  | Şifre               | Üst sınırın üstü | ÖK-1     | 21 karakter: `oyun12345678901234567` | 400, "Şifre 8-20 karakter olmalıdır."         |                   |       |
-| BVA-13  | Yaş                 | Alt sınırın altı | ÖK-1     | `12`                                 | 400, "Yaş 13 ile 99 arasında olmalıdır."      |                   |       |
-| BVA-14  | Yaş                 | Alt sınır        | ÖK-1     | `13`                                 | Kayıt başarılı (302)                          |                   |       |
-| BVA-15  | Yaş                 | Alt sınırın üstü | ÖK-1     | `14`                                 | Kayıt başarılı (302)                          |                   |       |
-| BVA-16  | Yaş                 | Üst sınırın altı | ÖK-1     | `98`                                 | Kayıt başarılı (302)                          |                   |       |
-| BVA-17  | Yaş                 | Üst sınır        | ÖK-1     | `99`                                 | Kayıt başarılı (302)                          |                   |       |
-| BVA-18  | Yaş                 | Üst sınırın üstü | ÖK-1     | `100`                                | 400, "Yaş 13 ile 99 arasında olmalıdır."      |                   |       |
+| Test ID | Test edilen özellik | Sınır noktası    | Ön koşul | Test girdisi                         | Beklenen sonuç                                | Gerçekleşen sonuç                                        | Durum               |
+|---------|---------------------|------------------|----------|--------------------------------------|-----------------------------------------------|----------------------------------------------------------|---------------------|
+| BVA-01  | Kullanıcı adı       | Alt sınırın altı | ÖK-1     | 2 karakter: `ab`                     | 400, "Kullanıcı adı 3-15 karakter olmalıdır." | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-02  | Kullanıcı adı       | Alt sınır        | ÖK-1     | 3 karakter: `abc`                    | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-03  | Kullanıcı adı       | Alt sınırın üstü | ÖK-1     | 4 karakter: `abcd`                   | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-04  | Kullanıcı adı       | Üst sınırın altı | ÖK-1     | 14 karakter: `abcdefghijklmn`        | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-05  | Kullanıcı adı       | Üst sınır        | ÖK-1     | 15 karakter: `abcdefghijklmno`       | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-06  | Kullanıcı adı       | Üst sınırın üstü | ÖK-1     | 16 karakter: `abcdefghijklmnop`      | 400, "Kullanıcı adı 3-15 karakter olmalıdır." | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-07  | Şifre               | Alt sınırın altı | ÖK-1     | 7 karakter: `oyun123`                | 400, "Şifre 8-20 karakter olmalıdır."         | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-08  | Şifre               | Alt sınır        | ÖK-1     | 8 karakter: `oyun1234`               | Kayıt başarılı (302)                          | 400, "Şifre 8-20 karakter olmalıdır." (kayıt reddedildi) | ❌ Başarısız (H-01) |
+| BVA-09  | Şifre               | Alt sınırın üstü | ÖK-1     | 9 karakter: `oyun12345`              | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-10  | Şifre               | Üst sınırın altı | ÖK-1     | 19 karakter: `oyun123456789012345`   | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-11  | Şifre               | Üst sınır        | ÖK-1     | 20 karakter: `oyun1234567890123456`  | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-12  | Şifre               | Üst sınırın üstü | ÖK-1     | 21 karakter: `oyun12345678901234567` | 400, "Şifre 8-20 karakter olmalıdır."         | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-13  | Yaş                 | Alt sınırın altı | ÖK-1     | `12`                                 | 400, "Yaş 13 ile 99 arasında olmalıdır."      | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-14  | Yaş                 | Alt sınır        | ÖK-1     | `13`                                 | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-15  | Yaş                 | Alt sınırın üstü | ÖK-1     | `14`                                 | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-16  | Yaş                 | Üst sınırın altı | ÖK-1     | `98`                                 | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-17  | Yaş                 | Üst sınır        | ÖK-1     | `99`                                 | Kayıt başarılı (302)                          | Beklenen ile aynı                                        | ✅ Başarılı         |
+| BVA-18  | Yaş                 | Üst sınırın üstü | ÖK-1     | `100`                                | 400, "Yaş 13 ile 99 arasında olmalıdır."      | Beklenen ile aynı                                        | ✅ Başarılı         |
 
 **Sepet testleri:** Ön koşul ÖK-2 (ali ile giriş yapılmış, sepet boş).
 **Adımlar:** 1) `/oyunlar` sayfasını aç → 2) Minecraft kartındaki adet alanına değeri yaz → 3) "Sepete Ekle" butonuna bas.
 
-| Test ID | Test edilen özellik   | Sınır noktası                | Ön koşul                   | Test girdisi | Beklenen sonuç                                             | Gerçekleşen sonuç | Durum |
-|---------|-----------------------|------------------------------|----------------------------|--------------|------------------------------------------------------------|-------------------|-------|
-| BVA-19  | Adet                  | Alt sınırın altı             | ÖK-2                       | adet = `0`   | 400, "Adet 1 ile 5 arasında olmalıdır."                    |                   |       |
-| BVA-20  | Adet                  | Alt sınır                    | ÖK-2                       | adet = `1`   | Sepete eklenir (302)                                       |                   |       |
-| BVA-21  | Adet                  | Alt sınırın üstü             | ÖK-2                       | adet = `2`   | Sepete eklenir (302)                                       |                   |       |
-| BVA-22  | Adet                  | Üst sınırın altı             | ÖK-2                       | adet = `4`   | Sepete eklenir (302)                                       |                   |       |
-| BVA-23  | Adet                  | Üst sınır                    | ÖK-2                       | adet = `5`   | Sepete eklenir (302)                                       |                   |       |
-| BVA-24  | Adet                  | Üst sınırın üstü             | ÖK-2                       | adet = `6`   | 400, "Adet 1 ile 5 arasında olmalıdır."                    |                   |       |
-| BVA-25  | Sepetteki toplam adet | Üst sınır (4 + 1 = 5)        | ÖK-2 + sepette 4 Minecraft | adet = `1`   | Sepete eklenir (302), sepette 5 adet                       |                   |       |
-| BVA-26  | Sepetteki toplam adet | Üst sınırın üstü (5 + 1 = 6) | ÖK-2 + sepette 5 Minecraft | adet = `1`   | Eklenmez, "Bir oyundan en fazla 5 adet alınabilir." hatası |                   |       |
+| Test ID | Test edilen özellik   | Sınır noktası                | Ön koşul                   | Test girdisi | Beklenen sonuç                                             | Gerçekleşen sonuç                      | Durum               |
+|---------|-----------------------|------------------------------|----------------------------|--------------|------------------------------------------------------------|----------------------------------------|---------------------|
+| BVA-19  | Adet                  | Alt sınırın altı             | ÖK-2                       | adet = `0`   | 400, "Adet 1 ile 5 arasında olmalıdır."                    | Beklenen ile aynı                      | ✅ Başarılı         |
+| BVA-20  | Adet                  | Alt sınır                    | ÖK-2                       | adet = `1`   | Sepete eklenir (302)                                       | Beklenen ile aynı                      | ✅ Başarılı         |
+| BVA-21  | Adet                  | Alt sınırın üstü             | ÖK-2                       | adet = `2`   | Sepete eklenir (302)                                       | Beklenen ile aynı                      | ✅ Başarılı         |
+| BVA-22  | Adet                  | Üst sınırın altı             | ÖK-2                       | adet = `4`   | Sepete eklenir (302)                                       | Beklenen ile aynı                      | ✅ Başarılı         |
+| BVA-23  | Adet                  | Üst sınır                    | ÖK-2                       | adet = `5`   | Sepete eklenir (302)                                       | Beklenen ile aynı                      | ✅ Başarılı         |
+| BVA-24  | Adet                  | Üst sınırın üstü             | ÖK-2                       | adet = `6`   | 400, "Adet 1 ile 5 arasında olmalıdır."                    | Beklenen ile aynı                      | ✅ Başarılı         |
+| BVA-25  | Sepetteki toplam adet | Üst sınır (4 + 1 = 5)        | ÖK-2 + sepette 4 Minecraft | adet = `1`   | Sepete eklenir (302), sepette 5 adet                       | Beklenen ile aynı                      | ✅ Başarılı         |
+| BVA-26  | Sepetteki toplam adet | Üst sınırın üstü (5 + 1 = 6) | ÖK-2 + sepette 5 Minecraft | adet = `1`   | Eklenmez, "Bir oyundan en fazla 5 adet alınabilir." hatası | 302, ürün eklendi, sepette 6 adet oldu | ❌ Başarısız (H-04) |
 
-> "Gerçekleşen sonuç" ve "Durum" sütunları testler çalıştırıldıktan sonra doldurulacak.
+> Testler 23.11.2026 tarihinde pytest ile çalıştırıldı (`hatali-surum`).
 
 ---
 
@@ -194,19 +194,30 @@ Diyagram dosyası: `diyagramlar/durum-gecis-diyagrami.png`
 
 **Ön koşul ÖK-1:** Uygulama çalışıyor, `ali` / `oyun12345` kullanıcısı kayıtlı, hiç yanlış giriş denemesi yapılmamış.
 
-| Test ID | Test edilen özellik                            | Geçişler       | Ön koşul | Test girdisi                                                                         | Test adımları                                                                 | Beklenen sonuç                                                              | Gerçekleşen sonuç | Durum |
-|---------|------------------------------------------------|----------------|----------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-------------------|-------|
-| ST-01   | Başarılı giriş                                 | T3             | ÖK-1, S0 | `ali` / `oyun12345`                                                                  | 1) `/giris` aç 2) Bilgileri yaz 3) "Giriş Yap" bas                            | S1'e geçer: 302 → `/oyunlar`, "Giriş başarılı."                             |                   |       |
-| ST-02   | Tek yanlış giriş                               | T1             | ÖK-1, S0 | `ali` / `yanlis123`                                                                  | 1) `/giris` aç 2) Bilgileri yaz 3) "Giriş Yap" bas                            | S0'da kalır: 401, "Kullanıcı adı veya şifre hatalı."                        |                   |       |
-| ST-03   | 3 yanlış giriş → hesap kilitlenir              | T1, T1, T2, T5 | ÖK-1, S0 | 3 kez `yanlis123`, sonra `oyun12345`                                                 | 1) 3 kez yanlış şifreyle giriş dene 2) Doğru şifreyle giriş dene              | S3'e geçer: 4. denemede doğru şifreye rağmen 403, "Hesabınız kilitlendi..." |                   |       |
-| ST-04   | Başarılı giriş yanlış deneme sayacını sıfırlar | T1, T1, T3     | ÖK-1, S0 | 2 kez `yanlis123`, sonra `oyun12345`, sonra (yeni gizli pencerede) 2 kez `yanlis123` | 1) 2 kez yanlış gir 2) Doğru gir 3) Yeni gizli pencere aç 4) 2 kez yanlış gir | Hesap kilitlenmez, son denemede 401 (403 değil)                             |                   |       |
-| ST-05   | Ziyaretçi oyunlar sayfasına giremez            | T4             | ÖK-1, S0 | —                                                                                    | 1) Giriş yapmadan `/oyunlar` aç                                               | S0'da kalır: 302 → `/giris`, "Bu sayfayı görmek için giriş yapmalısınız."   |                   |       |
-| ST-06   | Ziyaretçi sepete giremez                       | T4             | ÖK-1, S0 | —                                                                                    | 1) Giriş yapmadan `/sepet` aç                                                 | S0'da kalır: 302 → `/giris`, "Sepeti görmek için giriş yapmalısınız."       |                   |       |
-| ST-07   | Giriş yapmış kullanıcı giriş sayfasına gidemez | —              | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) `/giris` aç                                                   | S1'de kalır: 302 → `/oyunlar`                                               |                   |       |
-| ST-08   | Sepete ekle ve satın al                        | T6, T9         | ÖK-1, S1 | Minecraft, adet `2`                                                                  | 1) Giriş yap 2) Minecraft'ı 2 adet ekle 3) "Satın Al" bas                     | S1 → S2 → S1: "Satın alma başarılı!", sepet boş                             |                   |       |
-| ST-09   | Boş sepetle satın alma                         | T7             | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) Sepet boşken `/sepet` → "Satın Al" bas                        | S1'de kalır: 302 → `/sepet`, "Sepetiniz boş."                               |                   |       |
-| ST-10   | Çıkıştan sonra korumalı sayfa                  | T10, T11       | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) "Çıkış Yap" bas 3) `/oyunlar` aç                              | S4 → S0: 302 → `/giris`, uyarı mesajı                                       |                   |       |
-| ST-11   | Çıkıştan sonra giriş sayfası açılır            | T10            | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) "Çıkış Yap" bas 3) `/giris` aç                                | S4: giriş formu görünür (200)                                               |                   |       |
-| ST-12   | Çıkıştan sonra tekrar giriş                    | T10, T12       | ÖK-1, S1 | `ali` / `oyun12345`                                                                  | 1) Giriş yap 2) Çıkış yap 3) Tekrar giriş yap                                 | S4 → S1: "Giriş başarılı."                                                  |                   |       |
+| Test ID | Test edilen özellik                            | Geçişler       | Ön koşul | Test girdisi                                                                         | Test adımları                                                                 | Beklenen sonuç                                                              | Gerçekleşen sonuç                                            | Durum               |
+|---------|------------------------------------------------|----------------|----------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------|---------------------|
+| ST-01   | Başarılı giriş                                 | T3             | ÖK-1, S0 | `ali` / `oyun12345`                                                                  | 1) `/giris` aç 2) Bilgileri yaz 3) "Giriş Yap" bas                            | S1'e geçer: 302 → `/oyunlar`, "Giriş başarılı."                             | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-02   | Tek yanlış giriş                               | T1             | ÖK-1, S0 | `ali` / `yanlis123`                                                                  | 1) `/giris` aç 2) Bilgileri yaz 3) "Giriş Yap" bas                            | S0'da kalır: 401, "Kullanıcı adı veya şifre hatalı."                        | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-03   | 3 yanlış giriş → hesap kilitlenir              | T1, T1, T2, T5 | ÖK-1, S0 | 3 kez `yanlis123`, sonra `oyun12345`                                                 | 1) 3 kez yanlış şifreyle giriş dene 2) Doğru şifreyle giriş dene              | S3'e geçer: 4. denemede doğru şifreye rağmen 403, "Hesabınız kilitlendi..." | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-04   | Başarılı giriş yanlış deneme sayacını sıfırlar | T1, T1, T3     | ÖK-1, S0 | 2 kez `yanlis123`, sonra `oyun12345`, sonra (yeni gizli pencerede) 2 kez `yanlis123` | 1) 2 kez yanlış gir 2) Doğru gir 3) Yeni gizli pencere aç 4) 2 kez yanlış gir | Hesap kilitlenmez, son denemede 401 (403 değil)                             | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-05   | Ziyaretçi oyunlar sayfasına giremez            | T4             | ÖK-1, S0 | —                                                                                    | 1) Giriş yapmadan `/oyunlar` aç                                               | S0'da kalır: 302 → `/giris`, "Bu sayfayı görmek için giriş yapmalısınız."   | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-06   | Ziyaretçi sepete giremez                       | T4             | ÖK-1, S0 | —                                                                                    | 1) Giriş yapmadan `/sepet` aç                                                 | S0'da kalır: 302 → `/giris`, "Sepeti görmek için giriş yapmalısınız."       | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-07   | Giriş yapmış kullanıcı giriş sayfasına gidemez | —              | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) `/giris` aç                                                   | S1'de kalır: 302 → `/oyunlar`                                               | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-08   | Sepete ekle ve satın al                        | T6, T9         | ÖK-1, S1 | Minecraft, adet `2`                                                                  | 1) Giriş yap 2) Minecraft'ı 2 adet ekle 3) "Satın Al" bas                     | S1 → S2 → S1: "Satın alma başarılı!", sepet boş                             | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-09   | Boş sepetle satın alma                         | T7             | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) Sepet boşken `/sepet` → "Satın Al" bas                        | S1'de kalır: 302 → `/sepet`, "Sepetiniz boş."                               | Beklenen ile aynı                                            | ✅ Başarılı         |
+| ST-10   | Çıkıştan sonra korumalı sayfa                  | T10, T11       | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) "Çıkış Yap" bas 3) `/oyunlar` aç                              | S4 → S0: 302 → `/giris`, uyarı mesajı                                       | 200, oyunlar sayfası açıldı (oturum kapanmadı)               | ❌ Başarısız (H-03) |
+| ST-11   | Çıkıştan sonra giriş sayfası açılır            | T10            | ÖK-1, S1 | —                                                                                    | 1) Giriş yap 2) "Çıkış Yap" bas 3) `/giris` aç                                | S4: giriş formu görünür (200)                                               | 302 → `/oyunlar`, giriş formu görünmedi                      | ❌ Başarısız (H-03) |
+| ST-12   | Çıkıştan sonra tekrar giriş                    | T10, T12       | ÖK-1, S1 | `ali` / `oyun12345`                                                                  | 1) Giriş yap 2) Çıkış yap 3) Tekrar giriş yap                                 | S4 → S1: "Giriş başarılı."                                                  | 302, ama "Giriş başarılı." mesajı yok; oturum hiç kapanmamış | ❌ Başarısız (H-03) |
 
-> "Gerçekleşen sonuç" ve "Durum" sütunları testler çalıştırıldıktan sonra doldurulacak.
+> Testler 23.11.2026 tarihinde pytest ile çalıştırıldı (`hatali-surum`).
+
+---
+
+## 5. Test Sonuçları Özeti (hatalı sürüm)
+
+| Teknik               | Test sayısı | Başarılı | Başarısız | Bulunan hatalar |
+|----------------------|-------------|----------|-----------|-----------------|
+| Eşdeğerlik Bölümleme | 24          | 22       | 2         | H-02, H-05      |
+| Sınır Değer Analizi  | 26          | 24       | 2         | H-01, H-04      |
+| Durum Geçiş Testi    | 12          | 9        | 3         | H-03            |
+| **Toplam**           | **62**      | **55**   | **7**     | **5 hata**      |
