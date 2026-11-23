@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block icerik %}
+    <h2>Oyunlar</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px;">
+        {% for oyun in oyunlar %}
+            <div class="kart" style="max-width: none; margin: 0;">
+                <h3 style="margin-top: 0;">{{ oyun.ad }}</h3>
+                <p style="font-size: 22px; font-weight: bold; color: #9d85ff;">{{ oyun.fiyat }} TL</p>
+                <form method="POST" action="/sepete-ekle">
+                    <input type="hidden" name="oyun_id" value="{{ oyun.id }}">
+                    <label>Adet (1-5)</label>
+                    <input type="text" name="adet" value="1">
+                    <button type="submit">Sepete Ekle</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

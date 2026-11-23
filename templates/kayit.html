@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block icerik %}
+    <div class="kart">
+        <h2>Kayıt Ol</h2>
+        <form method="POST">
+            <label>Kullanıcı Adı</label>
+            <input type="text" name="kullanici_adi">
+
+            <label>E-posta</label>
+            <input type="text" name="email">
+
+            <label>Şifre</label>
+            <input type="password" name="sifre">
+
+            <label>Şifre Tekrar</label>
+            <input type="password" name="sifre_tekrar">
+
+            <label>Yaş</label>
+            <input type="text" name="yas">
+
+            <button type="submit">Kayıt Ol</button>
+        </form>
+        <p>Zaten hesabın var mı? <a href="/giris">Giriş yap</a></p>
+    </div>
+{% endblock %}
